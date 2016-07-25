@@ -1,0 +1,8 @@
+defmodule RaspberryPhoenix.AlarmView do
+  use RaspberryPhoenix.Web, :view
+
+  def render("alarms.json", %{alarms: alarms}) do
+    alarms
+  end
+end
+
