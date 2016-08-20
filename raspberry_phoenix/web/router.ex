@@ -25,6 +25,7 @@ defmodule RaspberryPhoenix.Router do
      pipe_through :api
      get "/alarms", AlarmsController, :alarms
      resources "/alarms", AlarmsController
+     resources "/tracks", TracksController
      post "/alarm", AlarmsController, :alarm
    end
 end

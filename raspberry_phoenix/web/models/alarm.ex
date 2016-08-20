@@ -8,7 +8,7 @@ defmodule RaspberryPhoenix.Alarm do
     field :date, Ecto.Date
     field :description, :string
     field :recurrence, :string
-   
+    
   end
 
   def changeset(struct, params \\ %{}) do
