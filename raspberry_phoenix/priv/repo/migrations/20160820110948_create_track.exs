@@ -7,12 +7,10 @@ defmodule RaspberryPhoenix.Repo.Migrations.CreateTrack do
       add :path, :string
       add :artist, :string
       add :album, :string
-      add :year, :string
-      add :alarm_id, references(:alarms, on_delete: :nothing)
+      add :year, :string     
 
       timestamps()
     end
-    create index(:tracks, [:alarm_id])
 
   end
 end

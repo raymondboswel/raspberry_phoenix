@@ -23,9 +23,9 @@ defmodule RaspberryPhoenix.Router do
   # Other scopes may use custom stacks.
    scope "/api", RaspberryPhoenix do
      pipe_through :api
-     get "/alarms", AlarmsController, :alarms
-     resources "/alarms", AlarmsController
+     #get "/alarms", AlarmsController, :alarms
+     resources "/alarms", AlarmController
      resources "/tracks", TracksController
-     post "/alarm", AlarmsController, :alarm
+     #post "/alarm", AlarmsController, :alarm
    end
 end
