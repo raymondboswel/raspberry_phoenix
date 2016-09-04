@@ -13,6 +13,6 @@ defmodule RaspberryPhoenix.Alarm do
 
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast( params, [:time, :date, :description, :recurrence])
+    |> cast( params, [:time, :date, :description, :recurrence, :track_id])
   end
 end

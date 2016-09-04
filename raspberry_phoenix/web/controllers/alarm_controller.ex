@@ -35,9 +35,10 @@ defmodule RaspberryPhoenix.AlarmController do
   end
 
   def update(conn, %{"id" => id, "alarm" => alarm_params}) do
+    Logger.info "Inside update"
     alarm = Repo.get!(Alarm, id)
     changeset = Alarm.changeset(alarm, alarm_params)
-
+    IO.inspect changeset
     case Repo.update(changeset) do
       {:ok, alarm} ->
         intalarm = Repo.get!(Alarm, alarm.id)
