@@ -10,9 +10,9 @@ config :raspberry_phoenix, RaspberryPhoenix.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
   secret_key_base: "za6ODXgcHPeJmMuhY/sT0eoPZoDsI0T89r9oWA8p2nDs1oJdaryfXObUPVHlcdt3",
-  render_errors: [accepts: ~w(html json)],
-  pubsub: [name: RaspberryPhoenix.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+  render_errors: [accepts: ~w(html json)]
+#  pubsub: [name: RaspberryPhoenix.PubSub,
+#           adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,

@@ -9,20 +9,20 @@ use Mix.Config
 config :raspberry_phoenix, RaspberryPhoenix.Endpoint,
   http: [port: 4000],
   debug_errors: true,
-  code_reloader: true,
+  code_reloader: false,
   check_origin: false,
   watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin"]]
 
 # Watch static and templates for browser reloading.
-config :raspberry_phoenix, RaspberryPhoenix.Endpoint,
-  live_reload: [
-    patterns: [
-      ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
-      ~r{priv/gettext/.*(po)$},
-      ~r{web/views/.*(ex)$},
-      ~r{web/templates/.*(eex)$}
-    ]
-  ]
+#config :raspberry_phoenix, RaspberryPhoenix.Endpoint,
+#  live_reload: [
+#    patterns: [
+#      ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
+#      ~r{priv/gettext/.*(po)$},
+#      ~r{web/views/.*(ex)$},
+#      ~r{web/templates/.*(eex)$}
+#    ]
+#  ]
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"

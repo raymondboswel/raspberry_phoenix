@@ -19,7 +19,8 @@ defmodule RaspberryPhoenix.Mixfile do
   def application do
     [mod: {RaspberryPhoenix, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :mariaex, :timex, :calecto, :calendar]]
+                    :phoenix_ecto, :mariaex, :timex, :calecto, :calendar],
+     included_applications: [:timex_ecto, :phoenix_pubsub]]
   end
 
   # Specifies which paths to compile per environment.
@@ -38,9 +39,8 @@ defmodule RaspberryPhoenix.Mixfile do
      {:calendar, "~>0.14.2"},
      {:phoenix_ecto, "~> 2.0"},
      {:phoenix_html, "~> 2.4"},
-     {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.9"},
-     {:exrm, "~> 1.0"},
+     {:distillery, "~> 1.0"},
      {:cowboy, "~> 1.0"}]
   end
 
